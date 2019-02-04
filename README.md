@@ -13,11 +13,12 @@ It includes pipeline BASH script `quali.sh`. To run this script you need to prov
 
 `THREADS` - defines number of CPUs.  
 
-`ANALYSIS` - has options "qualimap", "trimm" and "fastqc". This is main variable defines the type of the run.  
+`ANALYSIS` - has options "qualimap", "trimm" and "fastqc". This is a main variable which defines the type of the run.  
 
 To run "fastqc" analysis you just need to provide FASTQ files in a working directory. It designed to run on paired reads samples, where file names must contain "_R1" and "_R2" in their names.  
 
-To run "qualimap" provide additional variables. This Qualimap2 script specified to run for RNA-seq BAM files.  
+The Qualimap2 script specified to run for RNA-seq BAM files.  
+To run "qualimap" provide additional variables.  
 
 `GTFFILE` - species the path to GTF file in working directory.  
 
