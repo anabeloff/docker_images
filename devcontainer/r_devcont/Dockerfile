@@ -1,5 +1,9 @@
 FROM rocker/tidyverse
 
+
+LABEL NAME="r_container"
+LABEL VERSION=0.0.1
+
 ENV TMP 'tmpR'
 
 RUN apt-get update \
@@ -46,9 +50,9 @@ RUN R -e "BiocManager::install('scran',ask=FALSE)"
 # RUN R -e "install.packages('mongolite')"
 
 # Cleanup
-#RUN rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
-#		&& apt-get clean \
-#		&& rm -rf /var/lib/apt/lists/ 
+RUN rm -rf /tmp/downloaded_packages/ /tmp/*.rds \
+		&& apt-get clean \
+		&& rm -rf /var/lib/apt/lists/ 
 
 WORKDIR /home/rstudio/kitematic
 

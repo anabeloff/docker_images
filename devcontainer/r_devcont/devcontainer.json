@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/docker-existing-dockerfile
 {
-	"name": "single_cell",
+	"name": "r_container",
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
@@ -15,8 +15,8 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": ["REditorSupport.r", "RDebugger.r-debugger"],
 
-	"workspaceMount": "source=/Users/belova1/projects/sc,target=/home/rstudio/kitematic,type=bind",
-	"workspaceFolder": "/home/rstudio/kitematic"
+	"workspaceMount": "source=${localWorkspaceFolder},target=/home/rstudio/kitematic,type=bind",
+	"workspaceFolder": "/home/rstudio/kitematic",
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
@@ -31,5 +31,5 @@
 	// "mounts": [ "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind" ],
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "vscode"
+	"remoteUser": "rstudio"
 }

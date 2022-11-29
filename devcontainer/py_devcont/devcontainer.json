@@ -1,7 +1,7 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
 // https://github.com/microsoft/vscode-dev-containers/tree/v0.183.0/containers/docker-existing-dockerfile
 {
-	"name": "tnd",
+	"name": "py_container",
 
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
@@ -13,9 +13,9 @@
 	"settings": {},
 	
 	// Add the IDs of extensions you want installed when the container is created.
-	"extensions": ["ms-python.python", "python.vscode-pylance", "ms-python.pylint", "njpwerner.autodocstring", "GitLab.gitlab-workflow", "DavidAnson.vscode-markdownlint"],
+	"extensions": ["ms-python.python", "python.vscode-pylance", "ms-python.pylint", "njpwerner.autodocstring", "DavidAnson.vscode-markdownlint"],
 
-	"workspaceMount": "source=/Users/belova1/projects/trac_n_drug,target=/mnt/vol,type=bind",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/mnt/vol,type=bind",
 	"workspaceFolder": "/mnt/vol"
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
